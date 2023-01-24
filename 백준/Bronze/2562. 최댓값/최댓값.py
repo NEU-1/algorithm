@@ -1,7 +1,7 @@
-a = []
-for _ in range(9):
-    b = int(input())
-    a.append(b)
-
-print(max(a))
-print(a.index(max(a)) + 1)
+num = []
+for i in range(9):
+    num.append(int(input()))
+max_num = max(num)
+index_num = num.index(max_num)
+print(max_num)
+print(index_num+1)
