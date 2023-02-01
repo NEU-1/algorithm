@@ -1,13 +1,12 @@
 N = int(input())
-paper = [[0 for _ in range(101)] for _ in range(101)]
+qube = [[0]*100]*100
+# print(qube)
+for n in range(N):
+    x, y = map(int,input().split())
+    for plus_y in range(10):
+        qube[y+plus_y] = qube[y+plus_y][:x] + [1]*10 + qube[y+plus_y][x+10:]
+count = 0
+for i in qube:
+    count += i.count(1)
 
-for _ in range(N):
-    x, y = map(int, input().split())
-    for i in range(x, x+10):
-        for j in range(y, y+10):
-            paper[i][j] = 1
-
-answer = 0
-for row in paper:
-    answer += row.count(1)
-print(answer)
+print(count)
