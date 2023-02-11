@@ -1,4 +1,3 @@
-
 def save0(sdoku):
     save = []
     for y in range(9):
